@@ -17,10 +17,6 @@
 #'
 #' examples
 
-library(scriptuRs)
-library(dplyr)
-dfs <- lds_scriptures() %>%
-  mutate(text2 = tolower(text))
 
 ask <- function(df_text, col, terms, output='dt', n = 200){
   # varname <- deparse(substitute(col))
@@ -54,6 +50,10 @@ ask <- function(df_text, col, terms, output='dt', n = 200){
     )
   }
 }
-dfs %>%
-  select(verse_short_title, text2) %>%
-  ask(text2, 'ye')
+# library(scriptuRs)
+# library(dplyr)
+# dfs <- lds_scriptures() %>%
+#   mutate(text2 = tolower(text))
+# dfs %>%
+#   select(verse_short_title, text2) %>%
+#   ask(text2, 'ye')
